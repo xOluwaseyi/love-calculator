@@ -1,0 +1,73 @@
+form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formResult {
+  text-align: center;
+}
+
+.formResult img {
+  height: 150px;
+  width: auto;
+}
+
+label,
+input,
+p {
+  margin-bottom: 10px;
+}
+
+label {
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: flex-start;
+  font-size: 19px;
+}
+
+input {
+  border: grey 2px solid;
+  border-radius: 30px;
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+  padding-left: 40px;
+}
+
+.icon {
+  background: url(https://www.freeiconspng.com/uploads/love-png-5.png) no-repeat
+    100%;
+  background-size: 30px;
+  background-position: 5px 3px;
+  background-color: white;
+}
+
+hr {
+  background-color: red;
+  height: 3px;
+  color: red;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  border: red 2px solid;
+  outline: none;
+  padding-left: 40px;
+}
+
+input::placeholder {
+  font-size: 17px;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: rgb(226, 5, 5);
+  width: 280px;
+  height: 40px;
+  font-weight: bolder;
+  font-size: 16px;
+}
