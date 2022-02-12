@@ -9,6 +9,7 @@ const LoveForm = () => {
   const [calcResult, setCalcResult] = useState("");
   const [resultGif, setResultGif] = useState("");
   const [isValid, setIsValid] = useState(false);
+  const [auth, setAuth] = useState(false);
 
   //   use ref
 
@@ -32,7 +33,7 @@ const LoveForm = () => {
       sNameInput.charAt(0).toUpperCase() + sNameInput.slice(1).toLowerCase();
 
     if (fName.length < 3 || sName.length < 3) {
-      alert("Input at least 3 letters on either of the form areas");
+      setAuth(true);
       setIsValid(false);
       return;
     }
@@ -109,6 +110,7 @@ const LoveForm = () => {
   //   reset button
 
   const resetBtn = (e) => {
+    setAuth(false);
     e.preventDefault();
     setIsValid(false);
   };
@@ -127,6 +129,7 @@ const LoveForm = () => {
               ref={fNameRef}
               placeholder="Enter your name"
             />
+
             <label htmlFor="yourCrushName">Your Crush Name:</label>
             <input
               type="text"
@@ -135,6 +138,7 @@ const LoveForm = () => {
               ref={sNameRef}
               placeholder="Enter your crush name"
             />
+            {auth && <p>Please input at least 3 letters in a box</p>}
 
             <button type="submit">Calculate %</button>
           </div>
@@ -157,7 +161,7 @@ const LoveForm = () => {
           <img src={resultGif} alt="reaction" />
           <div>
             <button type="button" onClick={resetBtn}>
-              Reset
+              Make another calculation
             </button>
           </div>
         </div>
