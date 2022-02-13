@@ -6,7 +6,7 @@ form div {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .formResult {
@@ -32,6 +32,7 @@ label {
 }
 
 input {
+  font-family: inherit;
   border: grey 2px solid;
   border-radius: 30px;
   font-size: 2rem;
@@ -74,6 +75,7 @@ button {
   width: 250px;
   height: 35px;
   font-weight: bolder;
+  font-family: inherit;
   font-size: 1.6rem;
   margin-top: 5px;
   box-shadow: 0 1px 5px black;
@@ -81,7 +83,7 @@ button {
 
 @media screen and (max-width: 550px) {
   p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .formResult img {
