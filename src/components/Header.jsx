@@ -15,7 +15,7 @@ const Header = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i className="fa fa-twitter" aria-hidden="true"></i>
             </a>
           </li>
           <li>
@@ -24,7 +24,7 @@ const Header = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fa fa-github" aria-hidden="true"></i>
+              <i className="fa fa-github" aria-hidden="true"></i>
             </a>
           </li>
           <li>
@@ -33,7 +33,7 @@ const Header = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i className="fa fa-user-circle" aria-hidden="true"></i>
             </a>
           </li>
         </ul>

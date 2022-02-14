@@ -13,7 +13,7 @@ const App = () => {
           src="https://www.freeiconspng.com/uploads/love-png-5.png"
           alt="love"
         />
-        <h1>LOVE CALCULATOR BY OLUWASEYI</h1>
+        <h1>LOVE METER BY OLUWASEYI</h1>
         <div className="app-form">
           <LoveForm />
         </div>
@@ -21,7 +21,7 @@ const App = () => {
       <footer>
         <div>
           <p> Made with Love by Oluwaseyi</p>
-          <p>&copy; 2022</p>
+          <p> &copy; 2022</p>
         </div>
       </footer>
     </>
