@@ -3,8 +3,8 @@ import "./LoveForm.css";
 
 const LoveForm = () => {
   // use state
-  const [fName, setFname] = useState("");
-  const [sName, setSname] = useState("");
+  const [firstName, setFirstname] = useState("");
+  const [secondName, setSecondName] = useState("");
   const [textResult, setTextResult] = useState("");
   const [calcResult, setCalcResult] = useState("");
   const [resultGif, setResultGif] = useState("");
@@ -38,27 +38,28 @@ const LoveForm = () => {
       return;
     }
 
-    setFname(fName);
-    setSname(sName);
+    setFirstname(fName);
+    setSecondName(sName);
 
     // calculating result
 
-    fetch(
-      "https://love-calculator.p.rapidapi.com/getPercentage?sname=" +
-        `${sName}` +
-        "&fname=" +
-        `${fName}`,
-      {
-        method: "GET",
-        headers: {
-          "x-rapidapi-host": "love-calculator.p.rapidapi.com",
-          "x-rapidapi-key":
-            "5afaa1f7e4mshe388e5ce13bb139p17d9fdjsnc3389b2cb0ea",
-        },
-      }
-    )
+    const params = {
+      secondName: sName,
+      firstName: fName,
+    };
+    let url = new URL("https://lovemeterbackend.herokuapp.com/lovemeter");
+
+    for (let k in params) {
+      url.searchParams.append(k, params[k]);
+    }
+
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((response) => {
-        console.log(response);
         if (!response.ok) {
           throw new Error("Something went wrong, check later");
         }
@@ -154,13 +155,13 @@ const LoveForm = () => {
           <hr />
           <h1>
             <strong>
-              {fName} and {sName} are:
+              {firstName} and {secondName} are:
             </strong>
           </h1>
           <p>{textResult}</p>
           <img src={resultGif} alt="reaction" />
           <div>
-            <button type="button" onClick={resetBtn}>
+            <button type="submit" onClick={resetBtn}>
               Make another calculation
             </button>
           </div>
