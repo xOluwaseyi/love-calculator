@@ -47,7 +47,7 @@ const LoveForm = () => {
       secondName: sName,
       firstName: fName,
     };
-    let url = new URL("https://lovemeterbackend.herokuapp.com/lovemeter");
+    let url = new URL("https://seyibackend.herokuapp.com/lovemeter");
 
     for (let k in params) {
       url.searchParams.append(k, params[k]);
